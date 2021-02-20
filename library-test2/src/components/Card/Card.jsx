@@ -2,6 +2,7 @@ import React,{useState,useEffect} from 'react'
 import increase from '../../assets/increase.png'
 import decrease from '../../assets/decrease.png'
 import equal from '../../assets/equal.png'
+import DynamicChart from '../DynamicChart/DynamicChart'
 
 const Card = ({element}) =>{
     const population = element.CurrentPopulation
@@ -35,6 +36,9 @@ const Card = ({element}) =>{
                     <div className="ml-2">
                         {element.CurrentPopulation}
                     </div>
+                </div>
+                <div className="d-flex align-items-center" style={{backgroundColor:'#EFEFEF', width:'400px', height:'70px', borderRadius:'7px'}}>
+                    <DynamicChart currentPopulation={element.CurrentPopulation} element={element}/>
                 </div>
             </div>
         </div>
